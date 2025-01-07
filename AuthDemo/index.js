@@ -35,8 +35,12 @@ app.get('/', (req, res) => {
     res.render('home');
 });
 
-
 // Register routes
+app.get('/register', async (req, res) => {
+    res.render('register');
+});
+
+
 app.post('/register', async (req, res) => {
     const { username, password } = req.body;
     try {
@@ -52,13 +56,14 @@ app.post('/register', async (req, res) => {
 });
 
 
-app.get('/register', async (req, res) => {
-    res.render('register');
-});
-
 
 
 // Login routes
+app.get('/login', async (req, res) => {
+    res.render('login');
+});
+
+
 app.post('/login', async (req, res) => {
     try {
         const { username, password } = req.body;
@@ -81,9 +86,6 @@ app.post('/login', async (req, res) => {
 });
 
 
-app.get('/login', async (req, res) => {
-    res.render('login');
-});
 
 
 // Logout route
