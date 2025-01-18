@@ -51,7 +51,7 @@ app.post('/register', async (req, res) => {
         res.redirect('/secret');
     } catch (err) {
         console.log(err);
-        res.send(`Error! Please try again! {err}`);
+        res.send(`Error! Please try again! ${err}`);
     }
 });
 
